@@ -19,3 +19,4 @@
 <img src="Images/Send Data.png">
 <img src="Images/Receive Data.png">
 <img src="Images/Server logs.png">
+<img src="Images/Server on Ubuntu.png">
