@@ -6,7 +6,6 @@ PORT = '9000'
 
 def Receive_data():
 	r = requests.get(IP + ':' + PORT)
-	# sensors = json.loads(r.text)
 	sensors = json.loads(r.json())
 	# To parapanw einai ena python dictionary
 

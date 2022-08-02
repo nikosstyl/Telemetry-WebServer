@@ -14,9 +14,8 @@ def Send_data():
 		can_compound_id = i
 		id = str(can_id) + "," + str(can_compound_id)
 		read_sensors[id] = str(randint(0,150))
-	# print_CAN_dict(read_sensors)
+	
 	r = requests.post(IP + ':' + PORT, json=json.dumps(read_sensors))
-	# print("Status code: %d" % r.status_code)
 
 
 def print_CAN_dict(dict):
