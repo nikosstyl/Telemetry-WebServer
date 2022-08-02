@@ -2,6 +2,9 @@ import json
 import requests
 from random import seed, randint
 
+IP = 'http://localhost'
+PORT = '9000'
+
 def Send_data():
 	read_sensors = {}
 
@@ -12,7 +15,7 @@ def Send_data():
 		id = str(can_id) + "," + str(can_compound_id)
 		read_sensors[id] = str(randint(0,150))
 	# print_CAN_dict(read_sensors)
-	r = requests.post('http://localhost:9000', json=json.dumps(read_sensors))
+	r = requests.post(IP + ':' + PORT, json=json.dumps(read_sensors))
 	# print("Status code: %d" % r.status_code)
 
 

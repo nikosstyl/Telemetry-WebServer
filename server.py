@@ -1,6 +1,9 @@
 from http.server import HTTPServer, BaseHTTPRequestHandler
 import json
 
+IP = 'localhost'
+PORT = 9000
+
 received = {}
 
 class requestHandler(BaseHTTPRequestHandler):
@@ -29,8 +32,7 @@ class requestHandler(BaseHTTPRequestHandler):
 		self.end_headers()
 
 def main():
-	PORT = 9000
-	server_address = ('localhost', PORT)
+	server_address = (IP, PORT)
 	server = HTTPServer(server_address, requestHandler)
 	print('Server running on port %s' % PORT)
 	server.serve_forever()

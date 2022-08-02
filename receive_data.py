@@ -1,8 +1,11 @@
 import json
 import requests
 
+IP = 'http://localhost'
+PORT = '9000'
+
 def Receive_data():
-	r = requests.get('http://localhost:9000')
+	r = requests.get(IP + ':' + PORT)
 	# sensors = json.loads(r.text)
 	sensors = json.loads(r.json())
 	# To parapanw einai ena python dictionary
